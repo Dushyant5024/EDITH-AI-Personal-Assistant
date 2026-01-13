@@ -104,7 +104,7 @@ def ChatBot(Query):
         with open(r"Data\ChatLog.json", "r") as f:
             messages = load(f)
 
-        # User ka query messages list me add kar rahe hain
+        # User ka query messages list me add kar rahe hain general formation of function
         messages.append({"role": "user", "content": f"{Query}"})
 
         # Groq API se response lene ke liye request kar rahe hain
@@ -148,4 +148,5 @@ def ChatBot(Query):
 if __name__== "__main__":
     while True:
         user_input = input("Enter Your Question: ")  # User se question le rahe hain
+
         print(ChatBot(user_input))  # Chatbot ka answer print kar rahe hain
